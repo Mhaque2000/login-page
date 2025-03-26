@@ -4,24 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    
     <div id="login-form">
       <h1>login</h1>
       <form id="l">
-      <input id="lname" type="text" name="username" placeholder="username" />
-      <input
-        id="lpass"
-        type="password"
-        name="password"
-        placeholder="password"
-      />
-      <button id="lbtn" type="submit">Submit</button>
-      <p>don't have an account? <a href="registration.html">register</a></p>
-    </form>
+        <input
+          id="lname"
+          type="text"
+          name="username"
+          placeholder="username"
+          required
+        />
+        <input
+          id="lpass"
+          type="password"
+          name="password"
+          placeholder="password"
+          required
+        />
+        <button id="lbtn" type="submit">Submit</button>
+        <p>don't have an account? <a href="registration.html">register</a></p>
+      </form>
     </div>
   </body>
 </html>

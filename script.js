@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // ✅ Check if we are on the registration page before running this script
-    const registerForm = document.getElementById("rg");
+    let currentPath = window.location.pathname;
 
-    if (registerForm) {
+    const registerForm = document.getElementById("rg");
+    const loginForm = document.getElementById("l");
+    const loggedInUser = document.getElementById('loggedInUser')
+    const logout = document.getElementById('logout-btn')
+
+    if (currentPath.includes('registration.html')) {
         registerForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -27,11 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
             this.reset(); // Clear the form
         });
     }
+   
 
-    // ✅ Check if we are on the login page before running this script
-    const loginForm = document.getElementById("l");
-
-    if (loginForm) {
+    if (currentPath.includes('login.html')) {
         loginForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -53,11 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
-    // ✅ Check if we are on the welcome page before running this script
-    const loggedInUser = document.getElementById('loggedInUser')
-    const logout = document.getElementById('logout-btn')
-    
-    if (loggedInUser || logout){
+
+    if (currentPath.includes('welcome.html')){
         loggedInUser.innerText = localStorage.getItem('loggedInUserName')
         logout.addEventListener('click', function (e) {
             // localStorage.clear()
