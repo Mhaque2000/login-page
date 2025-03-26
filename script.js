@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // ✅ Check if we are on the registration page before running this script
     const registerForm = document.getElementById("rg");
+
     if (registerForm) {
-        // alert("You're in the register page");
         registerForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ Check if we are on the login page before running this script
     const loginForm = document.getElementById("l");
+
     if (loginForm) {
-        // alert("You're in the login page");
         loginForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -52,16 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
             this.reset();
         });
     }
+    
+    // ✅ Check if we are on the welcome page before running this script
+    const loggedInUser = document.getElementById('loggedInUser')
     const logout = document.getElementById('logout-btn')
-    if (logout) {
+    
+    if (loggedInUser || logout){
+        loggedInUser.innerText = localStorage.getItem('loggedInUserName')
         logout.addEventListener('click', function (e) {
             // localStorage.clear()
             localStorage.removeItem('loggedInUserName')
             window.location.href = '/login.html'
         })
-    }
-    const loggedInUser = document.getElementById('loggedInUser')
-    if(loggedInUser){
-        loggedInUser.innerText = localStorage.getItem('loggedInUserName')
     }
 });
