@@ -1,0 +1,69 @@
+*{
+    background-color:rgb(253, 253, 253);
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+#login-form, #registration-form{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background-color: white;
+    box-shadow: 0 0 10px  rgb(199, 198, 198);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 25px;
+    margin: 10px 0;
+    border-radius: 5px;
+
+}
+input{
+    border: 1px solid grey;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+#lbtn, #rgbtn{
+    padding: 10px;
+    background-color: rgb(76, 150, 220);
+    color: white;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+ h1{
+    color: blue;
+    letter-spacing: 3px;
+ }
+ #welcome{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+ }
+ #logout-btn{
+    background-color: blue;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+ }
+ /* #homepage{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+ } */
