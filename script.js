@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
+    // PATH OF CURRENT URL 
     let currentPath = window.location.pathname;
 
+    // WEB ELEMENTS
     const registerForm = document.getElementById("rg");
     const loginForm = document.getElementById("l");
     const loggedInUser = document.getElementById('loggedInUser')
     const logout = document.getElementById('logout-btn')
 
+    // REGISTRATION PAGE EVENTS
     if (currentPath.includes('registration.html')) {
         registerForm.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -32,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
    
-
+    // LOGIN PAGE EVENTS
     if (currentPath.includes('login.html')) {
         loginForm.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -55,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
-
+    // WELCOME PAGE EVENTS
     if (currentPath.includes('welcome.html')){
         loggedInUser.innerText = localStorage.getItem('loggedInUserName')
         logout.addEventListener('click', function (e) {
